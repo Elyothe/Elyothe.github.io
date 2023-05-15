@@ -1,0 +1,63 @@
+.boutonExplorer {
+  --c:  #ffffff; /* la couleur */
+  cursor:pointer;
+  box-shadow: 0 0 0 .1em inset var(--c); 
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: 
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .9s, background-position 0s .9s;
+  
+  width: 125px;
+  height: 35px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: rgb(255, 255, 255); /* Couleur du texte */
+  font-family: "Courier New", monospace; /* Utilisation d'une police monospace */
+  letter-spacing: 2px; /* Espacement des caractères */
+}
+
+.boutonExplorer:hover {
+  --_p: 100%;
+  transition: background-position .7s, background-size 0s;
+  
+  color: rgb(0, 0, 0); /* Couleur du texte lorsque la souris survole le bouton */
+}
+
+
+
+body {
+  background-color: rgb(0, 0, 0);
+  padding: 0;
+  color: black;
+  background-image: url('image/svg-animation-stroke.svg');
+  background-repeat: no-repeat;
+  background-position: 125px -265px;
+  background-size: 100%;
+
+}
+.container {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  border: 1px solid white; /* Ajout d'un cadre blanc */
+  box-sizing: border-box; /* Inclure la bordure dans la taille totale */
+}
+.h1
+{
+  font-size: 50px;
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Utilisation d'une police monospace */
+  font-weight: normal;
+}
+

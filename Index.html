@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mon Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="design/Home.css">
+  <style>
+    /* Ajoutez le style pour l'animation de fondu */
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 0.5s ease-out;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="h1" style="color:rgb(255, 255, 255);">Vincenot Eliot</h1>
+  </header>
+  <div class="container"></div> 
+  <main>
+    <button class="boutonExplorer" onclick="fadeAndRedirect();">Explorer</button>
+  </main>
+
+  <script>
+    function fadeAndRedirect() {
+      // Ajoutez la classe "fade-out" à <body> pour déclencher l'animation de fondu
+      var body = document.querySelector('body');
+      body.classList.add('fade-out');
+
+      // Redirigez vers la page "presentation.html" après un certain délai
+      setTimeout(function() {
+        window.location.href = 'presentation.html';
+      }, 500); // Le délai est défini en millisecondes (ici, 0,5 seconde)
+    }
+  </script>
+</body>
+</html>
+
+
